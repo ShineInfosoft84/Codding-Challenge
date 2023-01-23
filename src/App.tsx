@@ -1,11 +1,12 @@
+import React from 'react';
 import './App.css';
 import data from "./data.json"
 
 function App() {
-  const carCount = {}
-  const uniqueModel = [];
-  const modelCount = {};
-  data.data.forEach(car => {
+  const carCount:any = {}
+  const uniqueModel:any = [];
+  const modelCount:any = {};
+  data.data.forEach(function(car:any) {
     carCount[car.Make] = (carCount[car.Make] || 0) + 1;
     modelCount[car["Vehicle Class"]] = (modelCount[car["Vehicle Class"]] || 0) + 1;
     if (!uniqueModel.includes(car.Model)) {
